@@ -23,32 +23,14 @@
 .carousel .carousel-slide {
   flex: 0 0 100%;
   scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  display: grid;
   position: relative;
   width: 100%;
-  min-height: min(50vw, calc(100dvh - var(--header-height)));
 }
 
-.carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) {
-  align-items: center;
-}
-
-.carousel .carousel-slide:has(.carousel-slide-content[data-align='right']) {
-  align-items: flex-end;
-}
-
-.carousel .carousel-slide .carousel-slide-image picture {
-  position: absolute;
-  inset: 0;
-}
-
-.carousel .carousel-slide .carousel-slide-image picture > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+/* stack the image and content in the same grid cell so the image sets the height */
+.carousel .carousel-slide > * {
+  grid-area: 1 / 1;
 }
 
 .carousel .carousel-slide .carousel-slide-content {
@@ -58,7 +40,28 @@
   color: white;
   background-color: rgb(19 19 19 / 75%);
   position: relative;
+  place-self: center start;
   width: var(--slide-content-width, auto);
+}
+
+.carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) .carousel-slide-content {
+  justify-self: center;
+}
+
+.carousel .carousel-slide:has(.carousel-slide-content[data-align='right']) .carousel-slide-content {
+  justify-self: end;
+}
+
+.carousel .carousel-slide .carousel-slide-image picture {
+  display: block;
+  width: 100%;
+}
+
+.carousel .carousel-slide .carousel-slide-image picture > img {
+  display: block;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
 }
 
 .carousel .carousel-slide-indicators {
