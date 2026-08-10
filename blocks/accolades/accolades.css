@@ -15,6 +15,20 @@
   border-top: 3px solid var(--link-color);
 }
 
+.accolades .accolades-media {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.accolades .accolades-media img,
+.accolades .accolades-media picture {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
 .accolades .accolades-headline {
   font-family: var(--heading-font-family);
   font-size: var(--heading-font-size-s);

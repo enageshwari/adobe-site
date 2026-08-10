@@ -4,7 +4,7 @@
 }
 
 .cover-letter .cover-letter-body {
-  background-color: var(--background-color);
+  background-color: lightyellow;
   border: 1px solid #e6e6e6;
   border-radius: 12px;
   padding: 32px 24px;
