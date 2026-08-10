@@ -1,0 +1,71 @@
+.requirements .requirements-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.requirements .requirements-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  background-color: var(--background-color);
+}
+
+.requirements .requirements-need {
+  position: relative;
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--dark-color);
+}
+
+.requirements .requirements-need::before {
+  content: "They need";
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #9a9a9a;
+  margin-bottom: 4px;
+}
+
+.requirements .requirements-match {
+  position: relative;
+  line-height: 1.6;
+}
+
+.requirements .requirements-match::before {
+  content: "I bring";
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--link-color);
+  margin-bottom: 4px;
+}
+
+.requirements .requirements-need > *,
+.requirements .requirements-match > * {
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  .requirements .requirements-item {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* vertical divider between need and match */
+  .requirements .requirements-match {
+    padding-left: 32px;
+    border-left: 1px solid #ececec;
+  }
+}

@@ -5,8 +5,14 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px 24px;
   min-height: 300px;
+
+  /* fallback band when no background image is authored */
+  background-color: var(--text-color);
 }
 
 .hero h1 {
@@ -14,6 +20,15 @@
   margin-left: auto;
   margin-right: auto;
   color: var(--background-color);
+}
+
+.hero p {
+  max-width: 1200px;
+  margin: 0.25em auto 0;
+  width: 100%;
+  color: var(--background-color);
+  opacity: 0.85;
+  font-size: var(--body-font-size-m);
 }
 
 .hero picture {

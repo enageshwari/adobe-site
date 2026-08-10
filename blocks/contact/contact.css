@@ -1,0 +1,30 @@
+.contact .contact-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 28px;
+}
+
+.contact .contact-links li {
+  position: relative;
+}
+
+.contact .contact-links a {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  color: var(--text-color);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.contact .contact-links a:hover,
+.contact .contact-links a:focus-visible {
+  color: var(--link-color);
+  border-bottom-color: var(--link-color);
+  text-decoration: none;
+}
