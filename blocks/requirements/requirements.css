@@ -19,9 +19,8 @@
 .requirements .requirements-need {
   position: relative;
   font-size: var(--body-font-size-xs);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
   color: var(--dark-color);
 }
 
@@ -38,6 +37,8 @@
 .requirements .requirements-match {
   position: relative;
   line-height: 1.6;
+    font-size: var(--body-font-size-xs);
+
 }
 
 .requirements .requirements-match::before {
@@ -46,7 +47,6 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: #9a9a9a;
   margin-bottom: 4px;
 }
