@@ -18,7 +18,7 @@
 
 .requirements .requirements-need {
   position: relative;
-  font-size: var(--body-font-size-xs);
+  font-size: var(--body-font-size-s);
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--dark-color);
@@ -37,7 +37,7 @@
 .requirements .requirements-match {
   position: relative;
   line-height: 1.6;
-    font-size: var(--body-font-size-xs);
+    font-size: var(--body-font-size-s);
 
 }
 
