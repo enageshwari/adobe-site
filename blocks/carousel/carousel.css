@@ -28,7 +28,7 @@
   width: 100%;
 }
 
-/* stack the image and content in the same grid cell so the image sets the height */
+/* stack the image and content in the same grid cell */
 .carousel .carousel-slide > * {
   grid-area: 1 / 1;
 }
